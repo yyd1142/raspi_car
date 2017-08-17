@@ -1,19 +1,19 @@
 #!/usr/bin/python
 #coding: utf8
+
 import sys
 import RPi.GPIO as GPIO
 import time
-import sys
 import tornado.ioloop
 import tornado.web
 import tornado.httpserver
 import tornado.options
 from tornado.options import define,options
 define("port",default=80,type=int)
-IN1 = 35
-IN2 = 36
-IN3 = 37
-IN4 = 38
+IN1 = 11
+IN2 = 12
+IN3 = 13
+IN4 = 15
 def init():
         GPIO.setmode(GPIO.BOARD)
         GPIO.setup(IN1,GPIO.OUT)
